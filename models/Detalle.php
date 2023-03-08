@@ -67,7 +67,7 @@ class Detalle extends \yii\db\ActiveRecord
         return [
             [['det_comentario'], 'string'],
             [['det_asiento', 'det_cinturon', 'det_claxon', 'det_tablero', 'det_clima', 'det_antena', 'det_encendedor', 'det_tapete', 'det_carroceria', 'det_trasera', 'det_delantera', 'det_tapon', 'det_parabrisa', 'det_limparabrisa', 'det_aceite', 'det_rines', 'det_retrovisores', 'det_liqfreno', 'det_anticongelante', 'det_hidraulico', 'det_combustible', 'det_luces', 'det_lucDelantera', 'det_lucDireccional', 'det_reversa', 'det_lucInterior', 'det_encendido', 'det_velocidad', 'det_freno', 'det_mano', 'det_sensor', 'det_fecha', 'det_fkunidad'], 'required'],
-            [['det_fecha'], 'safe'],
+            [['det_fecha'],  'string', 'max' => 20],
             [['det_fkunidad'], 'integer'],
             [['det_asiento', 'det_cinturon', 'det_claxon', 'det_tablero', 'det_clima', 'det_antena', 'det_encendedor', 'det_tapete', 'det_carroceria', 'det_trasera', 'det_delantera', 'det_tapon', 'det_parabrisa', 'det_limparabrisa', 'det_aceite', 'det_rines', 'det_retrovisores', 'det_liqfreno', 'det_anticongelante', 'det_hidraulico', 'det_combustible', 'det_luces', 'det_lucDelantera', 'det_lucDireccional', 'det_reversa', 'det_lucInterior', 'det_encendido', 'det_velocidad', 'det_freno', 'det_mano', 'det_sensor'], 'string', 'max' => 15],
             [['det_fkunidad'], 'exist', 'skipOnError' => true, 'targetClass' => Unidad::class, 'targetAttribute' => ['det_fkunidad' => 'uni_id']],

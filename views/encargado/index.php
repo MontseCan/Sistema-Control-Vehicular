@@ -18,6 +18,10 @@ $this->params['breadcrumbs'][] = 'Encargados';
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <h3>Filtrado por:</h3>
+    <?php echo $this->render('_search', ['model' => $searchModel]);
+    ?>
+
     <?php
     $gridColumns = [
         [
@@ -83,7 +87,6 @@ $this->params['breadcrumbs'][] = 'Encargados';
     <?= GridView::widget([
 
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => $gridColumns,
         'headerContainer' => ['style' => 'top:50px', 'class' => 'kv-table-header'],
         'responsive' => true,
@@ -99,7 +102,7 @@ $this->params['breadcrumbs'][] = 'Encargados';
                 'content' =>
                 Html::a('<i class="fas fa-plus"></i>', ['create'], [
                     'class' => 'btn btn-success',
-                    'title' => 'Agregar Unidad',
+                    'title' => 'Agregar Encargado',
                 ]) . ' ' .
                     Html::a('<i class="fas fa-redo"></i>', ['index'], [
                         'class' => 'btn btn-outline-secondary',

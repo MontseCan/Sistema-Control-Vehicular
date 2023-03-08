@@ -25,11 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'enc_foto',
                 'format' => 'html',
-                'value' => Html::img(yii\helpers\Url::to($model->enc_foto), ['width' => '100px']),
+                'value' => Html::img(yii\helpers\Url::to('/uploads/perfil/' .$model->enc_foto), ['width' => '250px']),
                 'hAlign' => 'center',
                 'valueColOptions' => ['style' => 'width:25%'],
             ],
-
+            
             [
                 'group' => true,
                 'label' => 'SECCIÓN 1: INFORMACIÓN BÁSICA',

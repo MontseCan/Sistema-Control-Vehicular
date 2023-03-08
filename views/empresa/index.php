@@ -95,7 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'content' =>
                 Html::a('<i class="fas fa-plus"></i>', ['create'], [
                     'class' => 'btn btn-success',
-                    'title' => 'Agregar Unidad',
+                    'title' => 'Agregar Empresa',
                 ]) . ' ' .
                     Html::a('<i class="fas fa-redo"></i>', ['index'], [
                         'class' => 'btn btn-outline-secondary',

@@ -108,7 +108,7 @@ $this->params['breadcrumbs'][] = 'CheckList';
                 'content' =>
                 Html::a('<i class="fas fa-plus"></i>', ['create'], [
                     'class' => 'btn btn-success',
-                    'title' => 'Agregar Unidad',
+                    'title' => 'Agregar Check list',
                 ]) . ' ' .
                     Html::a('<i class="fas fa-redo"></i>', ['index'], [
                         'class' => 'btn btn-outline-secondary',

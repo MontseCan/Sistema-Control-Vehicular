@@ -263,7 +263,7 @@ $this->params['breadcrumbs'][] = $this->title;
         
         'panel' => [
             'type' => 'danger',
-            'heading' => '<i class="fa-solid fa-car-side"></i> Unidades',
+            'heading' => '<i class="fas fa-chart-bar"></i> CheckList',
             'footer' => false
         ],
     ]);

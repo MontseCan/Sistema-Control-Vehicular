@@ -189,7 +189,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'panel' => [
                 'type' => 'danger',
-                'heading' => '<i class="fa-solid fa-screwdriver-wrench"></i> Servicios',
+                'heading' => '<i class="fa-solid fa-calendar-check"></i> Bitácora',
                 'footer' => false
             ],
         ]);

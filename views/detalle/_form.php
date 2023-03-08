@@ -2,10 +2,11 @@
 
 use yii\helpers\Html;
 use app\models\Unidad;
-use kartik\select2\Select2;
+use kartik\builder\Form;
 use kartik\form\ActiveForm;
 //use yii\widgets\ActiveForm;
-use kartik\builder\Form;
+use kartik\select2\Select2;
+use kartik\datetime\DateTimePicker;
 
 /** @var yii\web\View $this */
 /** @var app\models\Detalle $model */
@@ -33,7 +34,15 @@ use kartik\builder\Form;
             ]);
             ?>
 
-            <?= $form->field($model, 'det_fecha')->input('date') ?>
+            <?= $form->field($model, 'det_fecha')->widget(DateTimePicker::classname(), [
+                'type' => DateTimePicker::TYPE_COMPONENT_APPEND,
+                'pluginOptions' => [
+                    'autoclose' => true,
+                    'format' => 'dd-M-yyyy HH:ii P',
+                    'value' => true,
+                ]
+            ]);
+            ?>
 
             <?= $form->field($model, 'det_comentario')->textarea(['rows' => 8]) ?>
 

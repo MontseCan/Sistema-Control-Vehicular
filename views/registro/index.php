@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = 'Bitácoras';
 
         [
             'class' => 'kartik\grid\ActionColumn',
-            'template' => User::hasRole(['controlarias'], false) ? '{view}' : (User::hasRole(['administradores'], false) ? '{view}' : '{view} {update}  {delete}'),
+            'template' => User::hasRole(['controlarias' ,'administradores'], false) ? '{view}' : (User::hasRole(['encargados'], false) ? '{view}': '{view} {update}  {delete}'),
             //'template' => User::hasRole(['controlarias'], false) ? '{view}' : (User::hasRole(['administradores'], false) ? '{view} {update}' : '{view} {update} {delete}'),
             'urlCreator' => function ($action, Registro $model, $key, $index, $column) {
                 return Url::toRoute([$action, 'id' => $model->reg_id]);
@@ -100,7 +100,7 @@ $this->params['breadcrumbs'][] = 'Bitácoras';
                 'content' =>
                 Html::a('<i class="fas fa-plus"></i>', ['create'], [
                     'class' => 'btn btn-success',
-                    'title' => 'Agregar Unidad',
+                    'title' => 'Agregar Bitácora',
                 ]) . ' ' .
                     Html::a('<i class="fas fa-redo"></i>', ['index'], [
                         'class' => 'btn btn-outline-secondary',
@@ -115,7 +115,7 @@ $this->params['breadcrumbs'][] = 'Bitácoras';
         ],
         'panel' => [
             'type' => 'danger',
-            'heading' => '<i class="fa-solid fa-screwdriver-wrench"></i> Servicios',
+            'heading' => '<i class="fa-solid fa-calendar-check"></i> Bitácoras',
             'footer' => false
         ],
     ]);
